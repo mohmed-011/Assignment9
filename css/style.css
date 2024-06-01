@@ -1,0 +1,91 @@
+body {
+  text-align: center;
+  background-image: url(../images/3795761.jpg);
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 80px;
+  font-family: Impact;
+}
+
+
+.button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.6em 2em;
+  border: mediumspringgreen solid 0.15em;
+  border-radius: 0.25em;
+  color: mediumspringgreen;
+  font-size: 1.5em;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border 300ms, color 300ms;
+  user-select: none;
+  margin: auto;
+}
+
+.button p {
+  z-index: 1;
+}
+
+.button:hover p{
+  color: #212121;
+}
+
+.button:active {
+  border-color: teal;
+}
+
+.button::after, .button::before {
+  content: "";
+  position: absolute;
+  width: 9em;
+  aspect-ratio: 1;
+  background: mediumspringgreen;
+  opacity: 50%;
+  border-radius: 50%;
+  transition: transform 500ms, background 300ms;
+}
+p{
+  font-size: 33px;
+  color: mediumspringgreen;
+}
+.button::before {
+  left: 0;
+  transform: translateX(-8em);
+}
+
+.button::after {
+  right: 0;
+  transform: translateX(8em);
+}
+
+.button:hover:before {
+  transform: translateX(-1em);
+}
+
+.button:hover:after {
+  transform: translateX(1em);
+}
+
+.button:active:before,
+.button:active:after {
+  background: teal;
+}
+
+
+.card {
+  width: 80%;
+ padding: 20px;
+ border-radius: 30px;
+ background: #212121;
+ box-shadow: 15px 15px 30px rgb(25, 25, 25),
+ -15px -15px 30px rgb(60, 60, 60);
+}
+
